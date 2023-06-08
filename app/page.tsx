@@ -9,7 +9,7 @@ export default async function Home() {
       <div className="flex-1  flex-col justify-center items-center bg-zinc-200">
         <h2 className="font-bold text-2xl text-center">Ejemplo con Esquema</h2>
         <form className="flex flex-col items-center justify-center w-full h-full">
-          {form.map((field) => {
+          {form.map((field: any) => {
             return (
               <input
                 key={field._key}

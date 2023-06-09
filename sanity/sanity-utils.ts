@@ -40,3 +40,21 @@ export async function getFirstForm() {
     `
   );
 }
+
+export async function getSecondForm() {
+  const client = createClient({
+    projectId: "c5ofbjqo",
+    dataset: "production",
+    apiVersion: "2023-06-06",
+  });
+
+  return client.fetch(
+    groq`*[_type == "secondForm"]{
+      _id,
+      _createdAt,
+      nombre,
+    }
+    `
+  )
+}
+

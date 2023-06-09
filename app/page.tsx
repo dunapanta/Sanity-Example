@@ -14,7 +14,20 @@ export default async function Home() {
   return (
     <main className="w-screen h-screen bg-zinc-200 flex">
       <div className="flex-1  flex-col justify-center items-center bg-zinc-200">
-        <h2 className="font-bold text-2xl text-center">Ejemplo con Esquema</h2>
+        <h2 className="font-bold text-2xl text-center">Ejemplo con Esquema2</h2>
+        {/* Button */}
+        <button
+          className="w-1/2 h-10 p-2 m-2 bg-blue-400 border-2 border-blue-500 rounded-md"
+          //type="submit"
+          onClick={(e) => {
+            e.preventDefault();
+            console.log("form 2");
+            //Navigate to Unicus
+            router.push("/unicus");
+          }}
+        >
+          Enviar
+        </button>
         <form className="flex flex-col items-center justify-center w-full h-full">
           {form.map((field: any) => {
             return (
@@ -69,19 +82,6 @@ export default async function Home() {
             Enviar
           </button>
         </form>
-        {/* Button */}
-        <button
-            className="w-1/2 h-10 p-2 m-2 bg-blue-400 border-2 border-blue-500 rounded-md"
-            //type="submit"
-            onClick={(e) => {
-              e.preventDefault();
-              console.log("form 2");
-              //Navigate to Unicus
-              router.push("/unicus");
-            }}
-          >
-            Enviar
-          </button>
       </div>
     </main>
   );

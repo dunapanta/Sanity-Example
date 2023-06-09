@@ -32,7 +32,6 @@ export default async function Home() {
             className="w-1/2 h-10 p-2 m-2 bg-blue-400 border-2 border-blue-500 rounded-md"
             //type="submit"
             onClick={(e) => {
-              //prevent default
               e.preventDefault();
               //Navigate to Unicus
               router.push("/unicus");
@@ -59,7 +58,8 @@ export default async function Home() {
           <button
             className="w-1/2 h-10 p-2 m-2 bg-blue-400 border-2 border-blue-500 rounded-md"
             //type="submit"
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault();
               //Navigate to Unicus
               router.push("/unicus");
             }}

@@ -69,6 +69,19 @@ export default async function Home() {
             Enviar
           </button>
         </form>
+        {/* Button */}
+        <button
+            className="w-1/2 h-10 p-2 m-2 bg-blue-400 border-2 border-blue-500 rounded-md"
+            //type="submit"
+            onClick={(e) => {
+              e.preventDefault();
+              console.log("form 2");
+              //Navigate to Unicus
+              router.push("/unicus");
+            }}
+          >
+            Enviar
+          </button>
       </div>
     </main>
   );

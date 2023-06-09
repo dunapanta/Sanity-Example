@@ -33,6 +33,7 @@ export default async function Home() {
             //type="submit"
             onClick={(e) => {
               e.preventDefault();
+              console.log("form 1");
               //Navigate to Unicus
               router.push("/unicus");
             }}
@@ -60,6 +61,7 @@ export default async function Home() {
             //type="submit"
             onClick={(e) => {
               e.preventDefault();
+              console.log("form 2");
               //Navigate to Unicus
               router.push("/unicus");
             }}
